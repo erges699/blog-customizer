@@ -19,7 +19,7 @@ import {
 	ArticleStateType,
 } from 'src/constants/articleProps';
 
-type ArticleParamsFormProps = {
+export type ArticleParamsFormProps = {
 	articleState: ArticleStateType;
 	setArticleState: (props: ArticleStateType) => void;
 };
