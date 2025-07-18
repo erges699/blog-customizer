@@ -39,9 +39,9 @@ export const ArticleParamsForm = ({
 	const [contentWidth, setContentWidth] = useState(articleState.contentWidth);
 
 	const handleFormSubmit = (e: SyntheticEvent) => {
-		console.log('Form submitted');
+		//console.log('Form submitted');
 		e.preventDefault();
-		console.log('Current state:', { fontFamily, fontSize, fontColor });
+		//console.log('Current state:', { fontFamily, fontSize, fontColor });
 		setArticleState({
 			...articleState,
 			fontFamilyOption: fontFamily,
