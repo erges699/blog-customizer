@@ -31,7 +31,7 @@ export const ArticleParamsForm = ({
 	const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
 	const [fontFamily, setFontFamily] = useState(articleState.fontFamilyOption);
-	const [fontSize, setFontsize] = useState(articleState.fontSizeOption);
+	const [fontSize, setFontSize] = useState(articleState.fontSizeOption);
 	const [fontColor, setFontColor] = useState(articleState.fontColor);
 	const [backgroundColor, setBackgroundColor] = useState(
 		articleState.backgroundColor
@@ -39,7 +39,9 @@ export const ArticleParamsForm = ({
 	const [contentWidth, setContentWidth] = useState(articleState.contentWidth);
 
 	const handleFormSubmit = (e: SyntheticEvent) => {
+		console.log('Form submitted');
 		e.preventDefault();
+		console.log('Current state:', { fontFamily, fontSize, fontColor });
 		setArticleState({
 			...articleState,
 			fontFamilyOption: fontFamily,
@@ -55,7 +57,7 @@ export const ArticleParamsForm = ({
 			setFontFamily(defaultArticleState.fontFamilyOption),
 			setFontColor(defaultArticleState.fontColor),
 			setBackgroundColor(defaultArticleState.backgroundColor),
-			setFontsize(defaultArticleState.fontSizeOption),
+			setFontSize(defaultArticleState.fontSizeOption),
 			setContentWidth(defaultArticleState.contentWidth);
 	};
 
@@ -95,7 +97,7 @@ export const ArticleParamsForm = ({
 						options={fontSizeOptions}
 						name='fontSize'
 						title='размер шрифта'
-						onChange={setFontsize}
+						onChange={setFontSize}
 					/>
 					<Select
 						selected={fontColor}
